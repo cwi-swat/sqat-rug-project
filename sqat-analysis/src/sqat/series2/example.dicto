@@ -1,0 +1,4 @@
+
+foo.Foo cannot depend bar.Bar
+foo.Foo::init cannot instantiate bar.Bar
+foo cannot import bar

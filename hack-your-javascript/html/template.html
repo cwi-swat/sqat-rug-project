@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="../../lib/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../../lib/codemirror.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script type="text/javascript" src="../../lib/codemirror.js"></script>
+	<script type="text/javascript" src="../../lib/mode/javascript.js"></script>
+
+	<script type="text/javascript" src="../../lib/q.js"></script>
+	<script type="text/javascript" src="../../lib/jslinq.js"></script>
+	
+	<style>
+		.code {
+  		border: 1px solid #e1e1e8;
+  		border-radius: 4px;	
+  	}
+  	
+  	.totheright {
+  		float: right;
+  	}
+  	
+  	#log {
+  		border: 1px solid #e1e1e8;
+  		border-radius: 4px;
+  		min-height: 100px;	 	
+  		padding: 5px;	
+  		
+			font-size: 1em;
+  		font-family: monospace;  		
+  	}
+
+		#log p {
+			margin: 0;
+  	}
+  	
+  	#log p.info {
+			color: #000;
+  	}
+  	
+  	#log p.error {
+  		color: red;
+  	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row page-header">
+     	<div class="col-md-10 col-xs-10">
+     		<h1>{{title}}</h1>
+     		<p class="lead">This page shows the result of {{nr}}.</p>
+     	</div>
+     	<div class="col-md-2  col-xs-2"> 	
+	   		<h1><img src="../../lib/logo.png"/></h1>
+	   	</div>
+		</div>
+
+ 		<div class="row">
+			<div class="col-md-6">
+				<h4>Original SweeterJS source</h4>
+				<div class="code" id="original"></div>
+			</div>
+			<div class="col-md-6">
+				<h4>Desugared JS source</h4>
+				<div class="code" id="transformed"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Console output of running the desugared version</h4>
+				<div id="log">
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<script>
+		CodeMirror(document.getElementById("original"), {
+			value: 
+" \
+{{original}} \
+",
+			mode: "javascript",
+			lineNumbers: true,
+			readOnly: true,
+			}); 
+
+		CodeMirror(document.getElementById("transformed"), {
+			value: 
+" \
+{{desugared}} \
+",
+			mode: "javascript",
+			lineNumbers: true,
+			readOnly: true,
+			}); 
+
+	</script>
+	
+	<script type="text/javascript" src="../../lib/console.log"></script>
+	<script type="text/javascript" src="../../lib/codebird.js"></script>
+	<script type="text/javascript" src="../../lib/hyj_twitter.js"></script>
+	
+	<script>
+		try {
+			{{desugaredSrc}}
+		} catch (e) {
+			if (e instanceof Error) {
+				console.error(e.message);
+			} else {
+				console.error(e);
+			}
+		}
+	</script>
+</body>
+</html>
