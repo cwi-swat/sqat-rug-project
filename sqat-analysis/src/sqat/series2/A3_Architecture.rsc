@@ -10,7 +10,7 @@ import IO;
 /*
 
 This assignment has two parts:
-- write a dicto file (see example.dictor for an example)
+- write a dicto file (see example.dicto for an example)
   containing 3 or more architectural rules for Pacman
   
 - write an evaluator for the Dicto language that checks for
