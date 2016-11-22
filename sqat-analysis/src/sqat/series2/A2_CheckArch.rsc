@@ -1,4 +1,4 @@
-module sqat::series2::A3_Architecture
+module sqat::series2::A2_CheckArch
 
 import sqat::series2::Dicto;
 import lang::java::jdt::m3::Core;

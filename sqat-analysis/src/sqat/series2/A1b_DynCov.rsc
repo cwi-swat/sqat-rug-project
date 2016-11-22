@@ -1,4 +1,4 @@
-module sqat::series2::A2a_Instrument
+module sqat::series2::A1b_DynCov
 
 import lang::java::\syntax::Java15;
 import ParseTree;

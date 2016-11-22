@@ -1,7 +1,7 @@
 module Plugin
 
 import sqat::series2::Dicto;
-import sqat::series2::A3_Architecture;
+import sqat::series2::A2_CheckArch;
 import util::IDE;
 import ParseTree;
 import util::ResourceMarkers;

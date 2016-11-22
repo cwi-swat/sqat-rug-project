@@ -1,4 +1,4 @@
-module sqat::series2::A1_Coverage
+module sqat::series2::A1a_StatCov
 
 import lang::java::jdt::m3::Core;
 
