@@ -22,12 +22,10 @@ The idea is that running the test-suite on the transformed program will produce 
 coverage information through the insert calls to your little API.
 
 Questions
-- compare your method coverage results to the static coverage estimation in the paper
-  and explain the differences (if any).
+- use a third-party coverage tool (e.g. Clover) to compare your results to (explain differences)
 - which methods have full line coverage?
 - which methods are not covered at all, and why does it matter (if so)?
-- elaborate on whether improving coverage would increase your confidence
-  in jpacman's correct operation.
+- what are the drawbacks of source-based instrumentation?
 
 Tips:
 - create a shadow JPacman project (e.g. jpacman-instrumented) to write out the transformed source files.

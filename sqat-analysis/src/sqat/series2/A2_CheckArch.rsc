@@ -49,9 +49,12 @@ Later on you can factor out commonality between rules if needed.
 The messages you produce will be automatically marked in the Java
 file editors of Eclipse (see Plugin.rsc for how it works).
 
+Tip:
+- for info on M3 see series2/A1a_StatCov.rsc.
+
 Questions
 - how would you test your evaluator of Dicto rules? (sketch a design)
-- come up with rules that are not currently supported by this version
+- come up with 3 rule types that are not currently supported by this version
   of Dicto (and explain why you'd need them). 
 */
 
