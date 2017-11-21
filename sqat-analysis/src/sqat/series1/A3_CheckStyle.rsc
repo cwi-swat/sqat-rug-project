@@ -1,6 +1,6 @@
 module sqat::series1::A3_CheckStyle
 
-import lang::java::\syntax::Java15;
+import Java17ish;
 import Message;
 
 /*

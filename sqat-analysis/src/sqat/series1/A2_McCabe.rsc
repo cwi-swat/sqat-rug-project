@@ -35,7 +35,7 @@ Bonus
 
 */
 
-set[Declaration] jpacmanASTs() = createAstsFromEclipseProject(|project://jpacman|, true); 
+set[Declaration] jpacmanASTs() = createAstsFromEclipseProject(|project://jpacman-framework|, true); 
 
 alias CC = rel[loc method, int cc];
 
