@@ -26,7 +26,7 @@ syntax Relation
   ;
 
 syntax Entity
-  = class: {Id "."}+
+  = classOrPackage: {Id "."}+
   | method: {Id "."}+ "::" Id
   ;
 

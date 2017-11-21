@@ -32,7 +32,6 @@ var doc = %html {
 
 console.log("DOM tree: ");
 console.log(doc);  
-  
 
 // State machines
 var doors = statemachine { 
