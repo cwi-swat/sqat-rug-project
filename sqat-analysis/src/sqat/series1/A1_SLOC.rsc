@@ -1,7 +1,10 @@
 module sqat::series1::A1_SLOC
 
 import IO;
+import ParseTree;
+import String;
 import util::FileSystem;
+import sqat::series1::Comments;
 
 /* 
 
@@ -36,8 +39,7 @@ alias SLOC = map[loc file, int sloc];
 
 SLOC sloc(loc project) {
   SLOC result = ();
-  
-  // to be done
-  
+  // implement here
   return result;
-}
+}             
+             
